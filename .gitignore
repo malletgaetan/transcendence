@@ -1,0 +1,9 @@
+./frontend/dist
+./frontend/node_modules
+**/__pycache__
+
+node_modules
+.env
+./*/.env
+./django/.env
+**/migrations/00**

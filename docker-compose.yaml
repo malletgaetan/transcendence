@@ -1,0 +1,78 @@
+version: '3'
+
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres:16.1
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - main
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 2s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    container_name: redis
+    image: redis:7
+    restart: always
+    networks:
+      - main
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 5
+
+  django:
+    container_name: django
+    depends_on:
+      postgresql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    build:
+      context: ./
+      dockerfile: ./django/Dockerfile
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - OAUTH_REDIRECT_URL=${OAUTH_REDIRECT_URL}
+      - FRONTEND_HOST=${FRONTEND_HOST}
+      - FRONTEND_URL=${FRONTEND_URL}
+    networks:
+      - main
+    healthcheck:
+      test: ["CMD-SHELL", "curl localhost:8000"]
+      interval: 2s
+      timeout: 3s
+      retries: 5
+
+  nginx:
+    container_name: nginx
+    depends_on:
+      django:
+        condition: service_healthy
+    build:
+      args:
+        - VITE_BACKEND_API=${VITE_BACKEND_API}
+        - VITE_BACKEND_WEBSOCKET=${VITE_BACKEND_WEBSOCKET}
+        - VITE_42_OAUTH_CLIENT_UID=${VITE_42_OAUTH_CLIENT_UID}
+        - VITE_42_OAUTH_REDIRECT_URL=${VITE_42_OAUTH_REDIRECT_URL}
+      context: ./
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - 8000:8000
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - main
+
+networks:
+  main:
+    driver: bridge
