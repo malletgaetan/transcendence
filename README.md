@@ -52,10 +52,10 @@ export VITE_42_OAUTH_CLIENT_SECRET=...
 ## Authors
 <table>
 	<tr>
-		<td> <img style="width:40px;height:100px;" src="https://avatars.githubusercontent.com/u/109520884?v=4"> </td>
-		<td> <img style="width:40px;height:100px;" src="https://avatars.githubusercontent.com/u/106318602?v=4"> </td>
-		<td> <img style="width:40px;height:100px;" src="https://avatars.githubusercontent.com/u/53295397?v=4"> </td>
-		<td> <img style="width:40px;height:100px;" src="https://avatars.githubusercontent.com/u/28073539?v=4"> </td>
+		<td> <img style="width:100px;height:100px;" src="https://avatars.githubusercontent.com/u/109520884?v=4"> </td>
+		<td> <img style="width:100px;height:100px;" src="https://avatars.githubusercontent.com/u/106318602?v=4"> </td>
+		<td> <img style="width:100px;height:100px;" src="https://avatars.githubusercontent.com/u/53295397?v=4"> </td>
+		<td> <img style="width:100px;height:100px;" src="https://avatars.githubusercontent.com/u/28073539?v=4"> </td>
 	</tr>
 	<tr>
 		<td style="text-align:center"> <a href="https://github.com/Fidget836">tmarie</a> </td>
