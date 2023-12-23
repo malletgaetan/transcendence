@@ -48,3 +48,19 @@ export TWILIO_VERIFY_SID=...
 export VITE_42_OAUTH_CLIENT_UID=...
 export VITE_42_OAUTH_CLIENT_SECRET=...
 ```
+
+## Authors
+<table>
+	<tr>
+		<td> <img style="width:40px;height:40px;" src="https://avatars.githubusercontent.com/u/109520884?v=4"> </td>
+		<td> <img style="width:40px;height:40px;" src="https://avatars.githubusercontent.com/u/106318602?v=4"> </td>
+		<td> <img style="width:40px;height:40px;" src="https://avatars.githubusercontent.com/u/53295397?v=4"> </td>
+		<td> <img style="width:40px;height:40px;" src="https://avatars.githubusercontent.com/u/28073539?v=4"> </td>
+	</tr>
+	<tr>
+		<td style="text-align:center"> <a href="https://github.com/Fidget836">tmarie</a> </td>
+		<td style="text-align:center"> <a href="https://github.com/Tandrya">mlaval</a> </td>
+		<td style="text-align:center"> <a href="https://github.com/emolina7">ermolina</a> </td>
+		<td style="text-align:center"> <a href="https://github.com/malletgaetan">gmallet</a> </td>
+	</tr>
+</table>
