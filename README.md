@@ -3,7 +3,7 @@
 ## Start server
 
 ```bash
-docker compose up
+./build.sh
 ```
 
 ## Stop server
