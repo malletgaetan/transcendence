@@ -1,5 +1,9 @@
 # Pong
 
+![wa](https://github.com/user-attachments/assets/5d400660-f4fc-4c67-a102-fe25c577c2ad)
+
+![we](https://github.com/user-attachments/assets/7a197c02-7884-4755-9af6-24e2c24da584)
+
 ## Start server
 
 ```bash
